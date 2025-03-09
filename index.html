@@ -6,13 +6,16 @@
     </head>
 
     <body>
-        <ul class="tasks">
-            <li class="task">
-                <a>Nouvelle tâche</a><button>Supprimer</button>
-            </li>
-            <!-- <li class="task"></li>
-            <li class="task"></li>
-            <li class="task"></li> -->
-        </ul>
+        <a href="./add-task.html">Add Task</a>
+        <div id="tasksWrapper">
+            <ol id="tasks">
+                <li class="task" id="task1">
+                    <p>Task 1</p><button onclick="deleteTask('task1')">Delete</button>
+                </li>
+                <li class="task" id="task2">
+                    <p>Task 2</p><button onclick="deleteTask('task2')">Delete</button>
+                </li>
+            </ol>
+        </div>
     </body>
 </html>
