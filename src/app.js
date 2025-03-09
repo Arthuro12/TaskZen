@@ -6,10 +6,10 @@ const deleteTask = (taskId) => {
     taskFound.remove();
 }
 
-const addTask = () => {
+const addTask = (event) => {
+    event.preventDefault();
     const taskNameInput = document.getElementById("task-name");
     const taskName = taskNameInput.value;
-    console.log(taskName);
 
     const taskDescriptionInput = document.getElementById("task-description");
     const taskDescription = taskDescriptionInput.value;
@@ -32,7 +32,6 @@ const addTask = () => {
 
     const taskElements = document.getElementById("tasks");
     taskElements.appendChild(listElement);
-    console.log(taskElements.getElementById(taskId));
 }
 
 document.getElementById("add-task").addEventListener("click", addTask)
